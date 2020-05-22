@@ -1,34 +1,72 @@
 {
-  "name": "admin-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+  "name": "82-techmeds",
+  "version": "0.0.1",
+  "description": "app to sell meds",
+  "homepage": "",
+  "author": {
+    "name": "vamshikilari",
+    "email": "vamshi9621@gmail.com",
+    "url": ""
+  },
+  "contributors": [],
+  "files": [
+    "server",
+    "src",
+    "lib",
+    "dist"
+  ],
+  "main": "lib/server/index.js",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:devopsalok/sampleApp.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8",
+    "npm": ">= 5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "clap build",
+    "prod-start": "NODE_ENV=production clap -n -x electrode/build prod",
+    "start": "if test \"$NODE_ENV\" = \"production\"; then npm run prod-start; else clap dev; fi",
+    "test": "clap check",
+    "coverage": "clap check",
+    "prod": "echo 'Starting standalone server in PROD mode'; NODE_ENV=production node ./lib/server/",
+    "heroku-postbuild": "clap build"
+  },
+  "dependencies": {
+    "@loadable/component": "^5.7.0",
+    "@loadable/server": "^5.9.0",
+    "bluebird": "^3.4.6",
+    "electrode-archetype-react-app": "7.0.0-beta7.0",
+    "electrode-confippet": "^1.5.0",
+    "electrode-cookies": "^1.0.0",
+    "electrode-react-webapp": "^3.2.0",
+    "electrode-redux-router-engine": "^3.0.0",
+    "electrode-server": "^2.2.0",
+    "electrode-static-paths": "^2.0.1",
+    "electrode-ui-config": "^1.1.2",
+    "good": "^8.1.1",
+    "good-console": "^7.1.0",
+    "inert": "^5.1.2",
+    "lodash": "^4.17.11",
+    "milligram": "^1.3.0",
+    "react-notify-toast": "^0.5.0",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@loadable/babel-plugin": "^5.10.0",
+    "@loadable/webpack-plugin": "^5.7.1",
+    "electrode-archetype-react-app-dev": "7.0.0-beta7.0"
   },
   "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
   }
 }
