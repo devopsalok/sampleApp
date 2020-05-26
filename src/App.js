@@ -7,14 +7,13 @@ import { isDesktopContext } from "./utils/detectViewportContext";
 function App() {
   return (
     <div className="main-app">
-      <isDesktopContext.Provider value={window.innerWidth > 750}>
-        <Router>
-          <Switch>
-            <Route exact path={"/"} component={Home} />
-            <Route exact path={"/test"} component={Home} />
-          </Switch>
-        </Router>
-      </isDesktopContext.Provider>
+      <Router>
+        <Switch>
+          <Route path={"/"}>
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

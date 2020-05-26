@@ -7,7 +7,7 @@ const { Header, Footer, Content } = Layout;
 function LayoutHoc({ children }) {
   return (
     <Layout>
-      <Header>
+      <Header style={{ background: "#ffff" }}>
         <MainHeader />
       </Header>
       <Content>{children}</Content>

@@ -1,18 +1,26 @@
 import React from "react";
-import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons";
 import { Button } from "antd";
+import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons";
 
 export const mainMenu = {
   actionItems: [
     {
       icon: ShoppingCartOutlined,
-      options: {
-        buttonOptions: <Button size={"large"}>Proceed to cart</Button>
-      }
+      title: "Shopping Cart",
+      groups: [
+        { title: "Group 1", options: ["option 1", "option 2"] },
+        { title: "Group 2", options: ["option 1", "option 2"] }
+      ]
     },
     {
       icon: UserOutlined,
-      options: { buttonOptions: <Button size={"large"}>Login/Logout</Button> }
+      title: "Login Status",
+      groups: [
+        {
+          title: "Group 1",
+          options: ["option 1", "option 2", <Button>Login/Logout</Button>]
+        }
+      ]
     }
   ]
 };
