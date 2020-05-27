@@ -10,7 +10,7 @@ function LayoutHoc({ children }) {
       <Header style={{ background: "#ffff" }}>
         <MainHeader />
       </Header>
-      <Content>{children}</Content>
+      <Content style={{ minHeight: "80vh" }}>{children}</Content>
       <Footer>Footer</Footer>
     </Layout>
   );
