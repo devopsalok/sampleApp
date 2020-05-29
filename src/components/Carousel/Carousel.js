@@ -1,20 +1,21 @@
 import React from "react";
 import { Carousel } from "antd";
+import { carousalData } from "../../fakedata/home";
 
 function CarouselContainer() {
   return (
     <Carousel>
-      <div>
-        <h1>Slide1</h1>
-      </div>
-
-      <div>
-        <h1>Slide2</h1>
-      </div>
-
-      <div>
-        <h1>Slide3</h1>
-      </div>
+      {carousalData.map((data, index) => {
+        return (
+          <div>
+            <img
+              alt={`carousal-${index}`}
+              src={data.imgSrc}
+              style={{ objectFit: "cover", width: "100%" }}
+            />
+          </div>
+        );
+      })}
     </Carousel>
   );
 }

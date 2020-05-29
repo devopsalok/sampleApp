@@ -1,22 +1,33 @@
 import React from "react";
+import "./index.css";
 import { Row, Col } from "antd";
 import { Menu } from "antd";
 import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons";
+import SearchInput from "../Customs/SearchInput/SearchInput";
+import { searchData } from "../../fakedata/home";
 
 const { SubMenu } = Menu;
 
 export default function MainHeader() {
   return (
-    <Row>
-      <Col span={18} push={18}>
+    <Row justify="space-around" align="middle">
+      <Col flex={2}>
+        <h1 style={{ margin: "0px" }}>Brand</h1>
+      </Col>
+      <Col flex={10}>
         <Menu
           // onClick={this.handleClick}
+          className="home-sub-menu"
           selectedKeys={[]}
+          theme="light"
           mode="horizontal"
         >
+          <Menu.Item title="Item search">
+            <SearchInput options={searchData} />
+          </Menu.Item>
           <SubMenu
-            icon={<ShoppingCartOutlined />}
-            title="Navigation Three - Submenu"
+            icon={<ShoppingCartOutlined style={{ fontSize: "24px" }} />}
+            title={<span style={{ fontSize: "18px" }}>Cart</span>}
           >
             <Menu.ItemGroup title="Item 1">
               <Menu.Item key="setting:1">Option 1</Menu.Item>
@@ -27,7 +38,10 @@ export default function MainHeader() {
               <Menu.Item key="setting:4">Option 4</Menu.Item>
             </Menu.ItemGroup>
           </SubMenu>
-          <SubMenu icon={<UserOutlined />} title="Navigation Three - Submenu">
+          <SubMenu
+            icon={<UserOutlined style={{ fontSize: "24px" }} />}
+            title={<span style={{ fontSize: "18px" }}>Profile</span>}
+          >
             <Menu.ItemGroup title="Item 1">
               <Menu.Item key="setting:1">Option 1</Menu.Item>
               <Menu.Item key="setting:2">Option 2</Menu.Item>
@@ -38,9 +52,6 @@ export default function MainHeader() {
             </Menu.ItemGroup>
           </SubMenu>
         </Menu>
-      </Col>
-      <Col span={6} pull={18}>
-        <h1>Brand</h1>
       </Col>
     </Row>
   );
