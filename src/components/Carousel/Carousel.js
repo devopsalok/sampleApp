@@ -1,10 +1,11 @@
 import React from "react";
+import "./index.css";
 import { Carousel } from "antd";
 import { carousalData } from "../../fakedata/home";
 
 function CarouselContainer() {
   return (
-    <Carousel>
+    <Carousel className="main-carousal">
       {carousalData.map((data, index) => {
         return (
           <div>

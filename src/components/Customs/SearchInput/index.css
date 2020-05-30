@@ -2,3 +2,7 @@
   width: 400px;
   padding: 10px;
 }
+span.location-input.ant-input-affix-wrapper.ant-input-affix-wrapper-lg {
+  width: 400px;
+  padding: 6px 10px;
+}

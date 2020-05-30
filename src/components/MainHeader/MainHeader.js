@@ -5,6 +5,7 @@ import { Menu } from "antd";
 import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons";
 import SearchInput from "../Customs/SearchInput/SearchInput";
 import { searchData } from "../../fakedata/home";
+import LocationFinder from "../Customs/LocationFinder/LocationFinder";
 
 const { SubMenu } = Menu;
 
@@ -22,6 +23,9 @@ export default function MainHeader() {
           theme="light"
           mode="horizontal"
         >
+          <Menu.Item title="Item location">
+            <LocationFinder />
+          </Menu.Item>
           <Menu.Item title="Item search">
             <SearchInput options={searchData} />
           </Menu.Item>
