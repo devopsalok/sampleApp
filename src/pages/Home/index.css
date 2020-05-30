@@ -1,0 +1,6 @@
+.ant-row.featured-cards-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}

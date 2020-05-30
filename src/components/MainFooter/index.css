@@ -1,6 +1,11 @@
-header.ant-layout-header.main-header {
-  background: rgb(255, 255, 255);
-  min-height: 75px;
+.main-footer-item-icon {
+  margin-right: 0.4em;
+  width: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  top: -1px;
+  position: relative;
+  text-align: center;
 }
 footer.ant-layout-footer.main-desktop-footer {
   background-color: #894ef6;
