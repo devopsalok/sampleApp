@@ -1,8 +1,13 @@
 //@flow
 import React from "react";
-import { Form, Input, Button, Checkbox } from "antd";
+import { Form, Input, Button, Checkbox, Typography } from "antd";
 
-export default function SignIn({ toggleModalState }) {
+export default function SignIn({
+  toggleModalState,
+  toggleModalContent
+}: {
+  toggleModalState: Object
+}) {
   const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 }
@@ -10,6 +15,8 @@ export default function SignIn({ toggleModalState }) {
   const tailLayout = {
     wrapperCol: { offset: 8, span: 16 }
   };
+
+  const { Text, Link } = Typography;
 
   const onFinish = values => {
     console.log("Success:", values);
@@ -48,9 +55,18 @@ export default function SignIn({ toggleModalState }) {
       </Form.Item>
 
       <Form.Item {...tailLayout}>
-        <Button type="primary" htmlType="submit">
-          Submit
+        <Button size="large" type="primary" htmlType="submit">
+          <>Submit</>
         </Button>
+      </Form.Item>
+      <Form.Item {...tailLayout}>
+        Not a registered user?{" "}
+        <span
+          style={{ cursor: "pointer" }}
+          onClick={() => toggleModalContent("signup")}
+        >
+          Sign Up
+        </span>
       </Form.Item>
     </Form>
   );

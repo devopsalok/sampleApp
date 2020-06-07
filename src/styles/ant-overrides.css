@@ -1,6 +1,6 @@
 /* only ant-d related overriding css here */
 footer.ant-layout-footer.main-desktop-footer {
-  background-color: #894ef6;
+  background-color: #0074d9;
   color: white;
   min-height: 400px;
   margin-top: 100px;
@@ -27,7 +27,7 @@ header.ant-layout-header.main-header {
   min-height: 75px;
 }
 footer.ant-layout-footer.main-desktop-footer {
-  background-color: #894ef6;
+  background-color: #0074d9;
   color: white;
   min-height: 400px;
   margin-top: 100px;
@@ -41,7 +41,7 @@ header.ant-layout-header.main-header {
   min-height: 75px;
 }
 footer.ant-layout-footer.main-desktop-footer {
-  background-color: #894ef6;
+  background-color: #0074d9;
   color: white;
   min-height: 400px;
   margin-top: 100px;

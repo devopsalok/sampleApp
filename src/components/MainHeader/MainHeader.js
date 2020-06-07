@@ -10,7 +10,7 @@ import LocationFinder from "../Customs/LocationFinder/LocationFinder";
 const { SubMenu } = Menu;
 const { Text } = Typography;
 
-export default function MainHeader() {
+export default function MainHeader({ toggleModalState }) {
   return (
     <Row justify="space-around" align="middle">
       <Col flex={2}>
@@ -31,7 +31,11 @@ export default function MainHeader() {
             <SearchInput options={searchData} />
           </Menu.Item>
           <Menu.Item title="Item search">
-            <Button type="primary" size="large">
+            <Button
+              type="primary"
+              size="large"
+              onClick={() => toggleModalState(true)}
+            >
               Login/Signup
             </Button>
           </Menu.Item>

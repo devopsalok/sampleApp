@@ -3,8 +3,7 @@ import { Modal } from "antd";
 import SignIn from "../../components/UserModals/SignIn";
 import SignUp from "../../components/UserModals/SignUp";
 
-export default function AuthContainer() {
-  const [isOpen, toggleModalState] = useState(false);
+export default function AuthContainer({ toggleModalState, isOpen }) {
   const [type, toggleModalContent] = useState("signin");
   return (
     <Modal

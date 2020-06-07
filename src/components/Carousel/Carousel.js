@@ -8,7 +8,7 @@ function CarouselContainer() {
     <Carousel className="main-carousal">
       {carousalData.map((data, index) => {
         return (
-          <div>
+          <div key={index}>
             <img
               alt={`carousal-${index}`}
               src={data.imgSrc}
