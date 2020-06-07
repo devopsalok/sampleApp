@@ -1,4 +1,10 @@
 [ignore]
+.*/node_modules/.*
+ .*/src/serviceWorker\.js
+.*/src/index\.js
+.*\.test\.js
+.*/craco.config\.js
+.*/setupTests\.js
 
 [include]
 
@@ -7,5 +13,6 @@
 [lints]
 
 [options]
+all=true
 
 [strict]

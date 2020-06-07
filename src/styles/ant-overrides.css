@@ -1,0 +1,52 @@
+/* only ant-d related overriding css here */
+footer.ant-layout-footer.main-desktop-footer {
+  background-color: #894ef6;
+  color: white;
+  min-height: 400px;
+  margin-top: 100px;
+  position: relative;
+  clear: both;
+  font-size: 14px;
+  line-height: 1.5;
+}
+ul.ant-menu.home-sub-menu.ant-menu-light.ant-menu-root.ant-menu-horizontal {
+  float: right;
+  border-bottom: none;
+  min-height: 75px;
+}
+.ant-select.search-input.ant-select-auto-complete.ant-select-single.ant-select-customize-input.ant-select-show-search {
+  width: 400px;
+  padding: 10px;
+}
+span.location-input.ant-input-affix-wrapper.ant-input-affix-wrapper-lg {
+  width: 400px;
+  padding: 6px 10px;
+}
+header.ant-layout-header.main-header {
+  background: rgb(255, 255, 255);
+  min-height: 75px;
+}
+footer.ant-layout-footer.main-desktop-footer {
+  background-color: #894ef6;
+  color: white;
+  min-height: 400px;
+  margin-top: 100px;
+  position: relative;
+  clear: both;
+  font-size: 14px;
+  line-height: 1.5;
+}
+header.ant-layout-header.main-header {
+  background: rgb(255, 255, 255);
+  min-height: 75px;
+}
+footer.ant-layout-footer.main-desktop-footer {
+  background-color: #894ef6;
+  color: white;
+  min-height: 400px;
+  margin-top: 100px;
+  position: relative;
+  clear: both;
+  font-size: 14px;
+  line-height: 1.5;
+}

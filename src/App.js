@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.less";
+import "./styles/ant-overrides.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home/Home";
 
