@@ -5,7 +5,7 @@ import OverlayElement from "./OverlayElement";
 
 export default function MenuElement() {
   return (
-    <Dropdown overlay={<OverlayElement />}>
+    <Dropdown overlay={<OverlayElement />} placement="bottomRight">
       <span>
         Category <DownOutlined />
       </span>

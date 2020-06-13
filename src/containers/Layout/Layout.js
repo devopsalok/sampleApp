@@ -5,6 +5,7 @@ import MainHeader from "../../components/MainHeader/MainHeader";
 import MainFooter from "../../components/MainFooter/MainFooter";
 import AuthContainer from "../AuthContainer/AuthContainer";
 import SecondaryMenu from "../../components/SecondaryMenu/SecondaryMenu";
+import "styled-components/macro";
 
 const { Header, Footer, Content } = Layout;
 
@@ -13,7 +14,13 @@ function LayoutHoc({ children }) {
   return (
     <Layout>
       <Affix>
-        <Header style={{ background: "#ffff" }} className="main-header">
+        <Header
+          css={`
+            background: #ffff;
+            border-bottom: 1px solid #f1f4f6;
+          `}
+          className="main-header"
+        >
           <MainHeader toggleModalState={toggleModalState} />
         </Header>
         <SecondaryMenu />

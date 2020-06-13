@@ -5,7 +5,7 @@ import { carousalData } from "../../fakedata/home";
 
 function CarouselContainer() {
   return (
-    <Carousel className="main-carousal">
+    <Carousel className="main-carousal" autoplay={true}>
       {carousalData.map((data, index) => {
         return (
           <div key={index}>

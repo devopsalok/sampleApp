@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
-import { List, Card, Row, Typography } from "antd";
+import { Card, Row, Typography } from "antd";
+import Carousel from "@brainhubeu/react-carousel";
 import {
   EditOutlined,
   EllipsisOutlined,
@@ -26,14 +27,26 @@ export default function CardListComponentTwo({ data }) {
         <Typography.Title level={2}>Featured Products</Typography.Title>
       </Row>
       <Row justify="space-around" align="middle">
-        <List
-          grid={{
-            gutter: 6
+        <Carousel
+          slidesPerPage={4}
+          slidesPerScroll={1}
+          clickToChange={true}
+          breakpoints={{
+            640: {
+              slidesPerPage: 1,
+              arrows: false
+            },
+            900: {
+              slidesPerPage: 2,
+              arrows: false
+            }
           }}
-          dataSource={data}
-          renderItem={item => (
-            <List.Item>
+          arrows={true}
+        >
+          {data.map((item, idx) => {
+            return (
               <Card
+                key={idx}
                 style={{ width: 300 }}
                 actions={[
                   <SettingOutlined key="setting" />,
@@ -43,9 +56,9 @@ export default function CardListComponentTwo({ data }) {
               >
                 <Card.Grid style={gridStyle}>Content</Card.Grid>
               </Card>
-            </List.Item>
-          )}
-        />
+            );
+          })}
+        </Carousel>
       </Row>
     </Fragment>
   );

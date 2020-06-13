@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
-import { List, Card, Avatar, Row, Typography } from "antd";
+import "@brainhubeu/react-carousel/lib/style.css";
+import Carousel from "@brainhubeu/react-carousel";
+import { Card, Avatar, Row, Typography } from "antd";
 import {
   EditOutlined,
   EllipsisOutlined,
   SettingOutlined
 } from "@ant-design/icons";
-
 export default function CardListComponent({ data }) {
   return (
     <Fragment>
@@ -16,14 +17,26 @@ export default function CardListComponent({ data }) {
       >
         <Typography.Title level={2}>Featured Products</Typography.Title>
       </Row>
+
       <Row justify="space-around" align="middle">
-        <List
-          grid={{
-            gutter: 6
+        <Carousel
+          slidesPerPage={4}
+          slidesPerScroll={1}
+          clickToChange={true}
+          breakpoints={{
+            640: {
+              slidesPerPage: 1,
+              arrows: false
+            },
+            900: {
+              slidesPerPage: 2,
+              arrows: false
+            }
           }}
-          dataSource={data}
-          renderItem={item => (
-            <List.Item>
+          arrows={true}
+        >
+          {data.map((item, idx) => {
+            return (
               <Card
                 style={{ width: 300 }}
                 cover={
@@ -32,6 +45,7 @@ export default function CardListComponent({ data }) {
                     src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
                   />
                 }
+                key={idx}
                 actions={[
                   <SettingOutlined key="setting" />,
                   <EditOutlined key="edit" />,
@@ -46,9 +60,9 @@ export default function CardListComponent({ data }) {
                   description="This is the description"
                 />
               </Card>
-            </List.Item>
-          )}
-        />
+            );
+          })}
+        </Carousel>
       </Row>
     </Fragment>
   );

@@ -14,6 +14,7 @@ function Home() {
       <CardListComponentTwo data={cardData} />
       <CardListComponent data={cardData} />
       <CardListComponentTwo data={cardData} />
+      <CardListComponent data={cardData} />
     </LayoutHoc>
   );
 }

@@ -11,7 +11,6 @@ footer.ant-layout-footer.main-desktop-footer {
 }
 ul.ant-menu.home-sub-menu.ant-menu-light.ant-menu-root.ant-menu-horizontal {
   float: right;
-  border-bottom: none;
   min-height: 75px;
 }
 .ant-select.search-input.ant-select-auto-complete.ant-select-single.ant-select-customize-input.ant-select-show-search {
